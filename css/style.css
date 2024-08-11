@@ -1,5 +1,6 @@
 
 :root {
+  background: #000;
     --text-sm:1.2rem;
     --gray-0: #ffffff;
     --gray-50: #f3f4f7;
@@ -31,7 +32,9 @@
     --shadow-sm: 0px 6px 3px rgba(255, 255, 255, .01), 0px 4px 2px rgba(255, 255, 255, .01), 0px 2px 2px rgba(255, 255, 255, .02), 0px 0px 1px rgba(255, 255, 255, .03);
     --shadow-md: 0px 28px 11px rgba(255, 255, 255, .01), 0px 16px 10px rgba(255, 255, 255, .03), 0px 7px 7px rgba(255, 255, 255, .05), 0px 2px 4px rgba(255, 255, 255, .06);
     --shadow-lg: 0px 62px 25px rgba(255, 255, 255, .01), 0px 35px 21px rgba(255, 255, 255, .05), 0px 16px 16px rgba(255, 255, 255, .1), 0px 4px 9px rgba(255, 255, 255, .12);
-    --accent:#008080;
+    /* --accent:#008080; */
+    --accent:  linear-gradient(15deg, #13547a 0%, #008080 100%);
+
     --font-body:  Noto Sans, sans-serif	;
 }
 .contacts {
@@ -59,11 +62,19 @@
 
 .contacts .contact:hover {
   text-decoration: none;
-  background-image: linear-gradient(90deg,#000,var(--accent));
+  background-image: var(--accent);
   padding-left: 50px;
   transition: 0.5s ease-out;
 }
-
+.extra{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.extra img{
+  margin-left: None;
+}
 
 body {
   background-image: linear-gradient(
@@ -74,7 +85,7 @@ body {
     #010101, 
     #000000   
         );
-  height: 100vh;
+    min-height: 100vh;
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     line-height: 1.5;
@@ -179,11 +190,12 @@ body {
 .techstack{
 margin: auto;
 }
-.title{
+.title,.title div{
   text-align: center;
   width: 100%;
   font-family: sans-serif	;
 }
+
 .work_experience{
   padding: 2rem;
   /* filter: grayscale(100%); */
