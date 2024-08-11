@@ -1,15 +1,19 @@
-var work_info = {
-    comp1: "TEXT",
-    comp2:"TEXT2",
-    comp3:"TEXT3"
-}
+// var work_info = {
+//     comp1: "TEXT",
+//     comp2:"TEXT2",
+//     comp3:"TEXT3"
+// }
 
-$(".comp")
+$(".contact")
 .mouseenter(function() {
-    let comp = work_info[$(this).data("comp")];
-    $('#notice_information').html(comp)
+    // let comp = work_info[$(this).data("comp")];
+    let name=$(this).data("name");
+    $('.links_name').html(name)
 });
-$(".comp")
+$(".contact")
 .mouseleave(function() {
-    $('#notice_information').html("")
+    $('.links_name').html("Links you are looking for");
 });
+
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
